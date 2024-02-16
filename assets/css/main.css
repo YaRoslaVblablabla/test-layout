@@ -1,0 +1,264 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+button{
+	cursor: pointer;
+}
+
+/* fonts */
+
+@font-face {
+    font-family: "Calibri"; 
+    src: url("../font/calibri-400.ttf") format("truetype");
+    src: url("../font/calibri-400.woff2") format("woff2");  
+    font-style: normal; 
+    font-weight: normal; 
+} 
+    
+@font-face {
+    font-family: "Calibri300"; 
+    src: url("../font/calibril-300.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+
+/* fonts */
+
+.wrapper{
+	max-width: 1920px;
+	overflow-x: hidden;
+	min-height: 100%;
+	position: relative;
+	margin: 0 auto;
+}
+
+.container{
+	max-width: 1852px;
+	margin: 0 auto;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 52px;
+  z-index: 15;
+}
+
+.header__menu{
+  display: flex;
+  gap: 16px;
+}
+
+.header__menu-item a{
+  font-family: 'Calibri';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: #404040;
+  text-transform: uppercase;
+  transition: all ease 0.3s;
+}
+
+.header__menu-item a:hover{
+  font-family: 'Calibri';
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  text-align: left;
+}
+
+.shop{
+  position: absolute;
+  top: 52px;
+  width: 100%;
+  background-color: #F5F5F5F2;
+  z-index: 1;
+
+
+  display:none;
+}
+
+.header__menu-search{
+  border: none;
+  border-bottom: 1px solid #D9D9D9;
+  width: 200px ;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.header__menu-search::placeholder{
+  font-family: 'Calibri';
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  text-align: right;
+}
+
+.header__burger{
+  height: 24px;
+  width: 24px;
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+}
+
+.header__burger-line{
+  width: 18px;
+  height: 0;
+  border-radius: 2px;
+  border: 1px solid #404040
+}
+
+.footer__menu{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  height: 44px;
+  gap: 24px;
+}
+
+.footer__menu-item{
+  transition: all ease 0.3s;
+}
+
+.footer__menu-item:hover{
+  border-bottom: 1px solid #404040;
+}
+
+.footer__menu-item a{
+  font-family: 'Calibri';
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  color: #404040;
+  text-transform: uppercase;
+  transition: all ease 0.3s;
+}
+
+.footer__menu-item:hover a{
+  font-family: "Calibri";
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 12px;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+
+@media(max-width: 1800px){
+  .container{
+    padding: 0 18px;
+  }
+  
+}
+
+@media(max-width:  1000px){
+
+	.header__menu:first-child{
+    display: none;
+  }
+
+  .footer{
+    display: none;
+  }
+}
+
+
+@media(max-width:  650px){
+
+  .header__menu{
+    display: none;
+  }
+
+  .header__burger{
+    display: flex;
+  }
+}

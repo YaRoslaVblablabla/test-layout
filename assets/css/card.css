@@ -1,0 +1,271 @@
+.main{
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+}
+
+.main__left{
+  padding: 299px 18px 0 0;
+}
+
+.main__left-img{
+  margin-bottom: 8px;
+}
+
+.main__center-img{
+  object-fit: cover;
+  align-self: center;
+  justify-self: center;
+}
+
+.main__right{
+  padding: 87px 100px;
+  max-width: 753px;
+  
+}
+
+.main__right-title{
+  font-family: "Calibri300";
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 59px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #404040;
+}
+
+.main__right-price{
+  font-family: "Calibri";
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 49px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #595959;
+  margin: 50px 0;
+}
+
+.main__right-price span{
+  color: #A1A1A1;
+}
+
+.main__right-description{
+  font-family: 'Calibri300';
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #95938F;
+}
+
+.main__right-colors{
+  font-family: 'Calibri300';
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #404040;
+}
+
+.p2{
+  margin: 30px 0;
+}
+
+.main__right-block{
+  display: flex;
+  margin-top: 14px;
+  gap: 8px;
+}
+
+.main__right-cirle{
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+}
+
+.collor1{
+  background: #595959;
+}
+
+.collor2{
+  background: #FBE5D6;
+}
+
+.collor3{
+  background:  #FFE9E7;
+}
+
+.main__right-btns{
+  margin: 50px 0;
+  display: flex;
+}
+
+.main__right-btn1{
+  width: 250px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all ease 0.3s;
+}
+
+.main__right-btn1:hover{
+  background-color: #A1A1A1;
+}
+
+.main__right-btn2{
+  border: none;
+  font-family: 'Calibri';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #595959;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0);
+  width: 250px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__right-section{
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.main__right-section-p1{
+  font-family: 'Calibri300';
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #010101;
+}
+
+.main__right-section-p2{
+  font-family: 'Calibri300';
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #404040;
+  margin: 10px 0 4px;
+}
+
+.main__right-section-price{
+  font-family: 'Calibri';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #404040;
+}
+
+
+@media(max-width: 1600px){
+  .main__left{
+    padding-top: 150px;
+  }
+
+  .main__right{
+    padding: 87px 50px;
+  }
+}
+
+
+@media(max-width: 1300px){
+  .main{
+    flex-direction: column;
+  }
+
+  .main__left{
+    order: 2;
+  }
+
+  .main__center{
+    order: 1;
+  }
+
+  .main__right{
+    order: 3;
+  }
+
+  .main__left{
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 30px 0 45px;
+  }
+
+  .main__left-img{
+    margin: 0;
+  }
+
+  .main__right-price{
+    margin: 30px 0;
+  }
+}
+
+@media(max-width: 600px){
+  .main__left{
+    margin: 12px 0 30px;
+    gap: 4px;
+  }
+
+  .main__left-img{
+    width: 60px;
+    height: 60px;
+  }
+
+  .main__right{
+    padding: 0;
+  }
+
+  .main__right-title{
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .main__right-price{
+    margin: 30px 0;
+  }
+
+  .main__right-btns{
+    display: block;
+  }
+
+  .main__right-section{
+    align-items: start;
+  }
+
+  .main__right-section-img{
+    width: 60px;
+    height: 60px;
+  }
+
+  .main__right-section-p1{
+    max-width: 193px;
+  }
+}
+
+@media(max-width: 400px){
+  .main__right-description{
+    max-width: 357px;
+  }
+
+  .main__right-btn1, .main__right-btn2{
+    width: 100%;
+  }
+}
